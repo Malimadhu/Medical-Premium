@@ -1,0 +1,216 @@
+View(a)
+library(pastecs)
+library(corrplot)
+library(tidyverse)
+t <- tibble(a)
+stat.desc(a)
+summary(a)
+View(a)
+a=read.csv("C:/Users/madhu/Downloads/archive/Medicalpremium.csv")
+View(a)
+library(pastecs)
+library(corrplot)
+library(tidyverse)
+c <- cor(a)
+corr_plot=corrplot(c,method="circle")
+#SLRM
+m <- lm(a$PremiumPrice~a$Age)
+d <- summary(m)
+d
+plot(m)
+plot(m)
+summary(a)
+t <- tibble(a)
+t
+head(a)
+stat.desc(a)
+c <- cor(a)
+corr_plot=corrplot(c,method="circle")
+#SLRM
+m <- lm(a$PremiumPrice~a$Age)
+d <- summary(m)
+d
+par(mfrow=c(2,2))
+plot(m)
+m_1 <- lm(a$PremiumPrice~a$Age+a$BloodPressureProblems+a$AnyTransplants+a$AnyChronicDiseases+a$NumberOfMajorSurgeries+a$Weight)
+d_1 <- summary(m_1)
+d_1
+m_2 <- lm(a$PremiumPrice~a$Age+a$AnyTransplants+a$AnyChronicDiseases+a$NumberOfMajorSurgeries+a$Weight)
+d_2 <-summary(m_2)
+d_2
+par(mfrow=c(2,2))
+plot(m_2)
+dim(a)
+t
+head(a)
+colSums(is.na(a))    #gives sum of null values in each column
+#EDA to see distribution of data
+ggplot(data=a)+
+geom_point(mapping=aes(x=PremiumPrice,y=Age,color=view,fill='clarity'))+
+facet_wrap(~Weight)
+library(ggplot2)
+#EDA to see distribution of data
+ggplot(data=a)+
+geom_point(mapping=aes(x=PremiumPrice,y=Age,color=view,fill='clarity'))+
+facet_wrap(~Weight)
+#EDA to see distribution of data
+ggplot(data=a)+
+geom_point(mapping=aes(x=PremiumPrice,y=Age,color=view,fill='clarity'))
+#EDA to see distribution of data
+ggplot(data=a)+
+geom_bar(mapping=aes(x=PremiumPrice,y=Age,color=view,fill='clarity'))
+ggplot(data=a)+
+geom_bar(mapping=aes(x=NumberOfMajorSurgeries,color=view,fill='clarity'))
+ggplot(data=a)+
+geom_bar(mapping=aes(x=PremiumPrice,color=view,fill='clarity'))
+ggplot(data=a)+
+geom_bar(mapping=aes(x=a$PremiumPrice,color=view,fill='clarity'))
+ggplot(data=a)+
+geom_bar(mapping=aes(x=PremiumPrice,color=view,fill='clarity'))
+ggplot(data=a)+
+geom_bar(mapping=aes(x=PremiumPrice,color=NumberOfMajorSurgeries,fill='clarity'))
+#EDA to see distribution of data
+ggplot(data=a)+
+geom_bar(mapping=aes(x=PremiumPrice,y=Age,color=NumberOfMajorSurgeries,fill='clarity'))+
+facet_wrap(~NumberOfMajorSurgeries)
+#EDA to see distribution of data
+ggplot(data=a)+
+geom_point(mapping=aes(x=PremiumPrice,y=Age,color=NumberOfMajorSurgeries,fill='clarity'))+
+facet_wrap(~NumberOfMajorSurgeries)
+#EDA to see distribution of data
+ggplot(data=a)+
+geom_point(mapping=aes(x=PremiumPrice,y=Age,color=NumberOfMajorSurgeries,fill='clarity'))
+ggplot(data=a)+
+geom_bar(mapping=aes(x=PremiumPrice,color=Age,fill='clarity'))
+hist(PremiumPrice,breaks = "Sturges",freq = NULL, probability = !freq,
+include.lowest = TRUE, right = TRUE, fuzz = 1e-7,
+density = NULL, angle = 45, col = "darkblue", border = NULL,
+main = paste("Histogram of Premium Price " , xname),
+xlim = range(breaks), ylim = NULL,
+xlab = xname, ylab,
+axes = TRUE, plot = TRUE, labels = FALSE,
+nclass = NULL)
+#ggplot(data=a)+
+#  geom_bar(mapping=aes(x=PremiumPrice,color=Age,fill='clarity'))
+hist(a$PremiumPrice,breaks = "Sturges",freq = NULL, probability = !freq,
+include.lowest = TRUE, right = TRUE, fuzz = 1e-7,
+density = NULL, angle = 45, col = "darkblue", border = NULL,
+main = paste("Histogram of Premium Price " , xname),
+xlim = range(breaks), ylim = NULL,
+xlab = xname, ylab,
+axes = TRUE, plot = TRUE, labels = FALSE,
+nclass = NULL)
+#ggplot(data=a)+
+#  geom_bar(mapping=aes(x=PremiumPrice,color=Age,fill='clarity'))
+hist(a$PremiumPrice,breaks = "Sturges",freq = NULL, probability = !freq,
+include.lowest = TRUE, right = TRUE, fuzz = 1e-7,
+density = NULL, angle = 45, col = "darkblue", border = NULL,
+main = paste("Histogram of Premium Price " , xname),
+xlim = range(breaks), ylim = NULL,
+xlab = xname, ylab,
+axes = TRUE, plot = TRUE, labels = FALSE)
+#ggplot(data=a)+
+#  geom_bar(mapping=aes(x=PremiumPrice,color=Age,fill='clarity'))
+hist(a$PremiumPrice,breaks = "Sturges",freq = NULL,
+include.lowest = TRUE, right = TRUE, fuzz = 1e-7,
+density = NULL, angle = 45, col = "darkblue", border = NULL,
+main = paste("Histogram of Premium Price " , xname),
+xlim = range(breaks), ylim = NULL,
+xlab = xname, ylab,
+axes = TRUE, plot = TRUE, labels = FALSE)
+#ggplot(data=a)+
+#  geom_bar(mapping=aes(x=PremiumPrice,color=Age,fill='clarity'))
+hist(a$PremiumPrice,breaks = "Sturges",freq = NULL,
+include.lowest = TRUE, right = TRUE, fuzz = 1e-7,
+density = NULL, angle = 45, col = "darkblue", border = NULL,
+main = paste("Histogram of Premium Price ")
+axes = TRUE, plot = TRUE, labels = FALSE)
+#ggplot(data=a)+
+#  geom_bar(mapping=aes(x=PremiumPrice,color=Age,fill='clarity'))
+hist(a$PremiumPrice,breaks = "Sturges",freq = NULL,
+include.lowest = TRUE, right = TRUE, fuzz = 1e-7,
+density = NULL, angle = 45, col = "darkblue", border = NULL,
+main = paste("Histogram of Premium Price ")
+axes = TRUE, plot = TRUE, labels = FALSE)
+#ggplot(data=a)+
+#  geom_bar(mapping=aes(x=PremiumPrice,color=Age,fill='clarity'))
+hist(a$PremiumPrice,breaks = "Sturges",freq = NULL,
+include.lowest = TRUE, right = TRUE, fuzz = 1e-7,
+density = NULL, angle = 45, col = "darkblue", border = NULL,
+main = paste ("Histogram of Premium Price ",xname),
+axes = TRUE, plot = TRUE, labels = FALSE)
+#ggplot(data=a)+
+#  geom_bar(mapping=aes(x=PremiumPrice,color=Age,fill='clarity'))
+hist(a$PremiumPrice,breaks = "Sturges",freq = NULL,
+include.lowest = TRUE, right = TRUE, fuzz = 1e-7,
+density = NULL, angle = 45, col = "darkblue", border = NULL,
+main = paste ("Histogram of Premium Price "),
+axes = TRUE, plot = TRUE, labels = FALSE)
+#Histogram to
+hist(a$Age,breaks = "Sturges",freq = NULL,
+include.lowest = TRUE, right = TRUE, fuzz = 1e-7,
+density = NULL, angle = 45, col = "darkblue", border = NULL,
+main = paste ("Histogram of Premium Price "),
+axes = TRUE, plot = TRUE, labels = FALSE)
+#Box plot to detect outliers
+boxplot(a$HistoryOfCancerInFamily,ylab="History of Cancer Family")
+#Box plot to detect outliers
+boxplot(a$PremiumPrice,ylab="History of Cancer Family")
+#Box plot to detect outliers
+boxplot(a$Age,ylab="History of Cancer Family")
+#Box plot to detect outliers
+boxplot(a$Diabetes,ylab="History of Cancer Family")
+#Box plot to detect outliers
+boxplot(a$BloodPressureProblems,ylab="History of Cancer Family")
+#Box plot to detect outliers
+boxplot(a$Age,ylab="History of Cancer Family")
+#Box plot to detect outliers
+boxplot(a$Age,ylab="Age of Customer")
+boxplot(a$PremiumPrice,ylab="Premium Prices For A Whole Year")
+colSums(a$NumberOfMajorSurgeries)
+barplot(a$NumberOfMajorSurgeries)
+ggplot(a)+
+geom_point(mapping=aes(x=NumberOfMajorSurgeries,y= PremiumPrice,color="cut"))+
+facet_wrap(~NumberOfMajorSurgeries)
+barplot(a$NumberOfMajorSurgeries)
+mp=cbind(a$PremiumPrice,a$Age,a$Diabetes,a$BloodPressureProblems,a$AnyTransplants,a$AnyChronicDiseases,a$Height,a$Weight,,a$KnownAllergies,a$HistoryOfCancerInFamily,a$NumberOfMajorSurgeries)
+mp=cbind(a$PremiumPrice,a$Age,a$Diabetes,a$BloodPressureProblems,a$AnyTransplants,a$AnyChronicDiseases,a$Height,a$Weight,a$KnownAllergies,a$HistoryOfCancerInFamily,a$NumberOfMajorSurgeries)
+pairs(mp)
+abline(0,1)
+pairs(mp)
+d <- summary(m)
+plot(m)
+plot(m)
+m_1 <- lm(a$PremiumPrice~a$Age+a$BloodPressureProblems+a$AnyTransplants+a$AnyChronicDiseases+a$NumberOfMajorSurgeries+a$Weight)
+d_1 <- summary(m_1)
+d
+par(mfrow=c(2,2))
+plot(m)
+abline(m)
+pairs(mp)
+abline(m)
+#Test for autocorrelation.
+library(car)
+durbinWatsonTest(m_1)
+#We get p value zero indicating that autocorelation is present 1
+#Test for autocorrelation.
+library(a)
+durbinWatsonTest(m_1)
+#We get p value zero indicating that autocorelation is present 1
+#Test for autocorrelation.
+durbinWatsonTest(m_1)
+d_2
+#Interpretation:
+#We see that residuals are non linear, heteroskedastic.
+#Normal QQ plot: Not perfectly normal, outliers are present.
+#Test for autocorrelation.
+durbinWatsonTest(m_2)
+#Checking for heteroscedasticity
+library(lmtest)
+lmtest::bptest(m_2)
+chisq.test(m_1)
+bartlett.test(a)
+#Bartlett test   H0: Var1=Var2=...=Vark   Vs H1: Atleast 1 ofthem differs
+ks.test(a)
+ks.test(a,0.1)
+ks.test(a,"punif",0.1)
